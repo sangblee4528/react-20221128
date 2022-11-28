@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
-import BasicTextFields from './BasicTextFields';
+
 
 export default function App() {
   return (
