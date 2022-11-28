@@ -3,6 +3,8 @@ import './style.css';
 import MultilineTextFields from './MultilineTextFields';
 import Hello from './Hello';
 import Counter from './Counter';
+import UserList from './UserList';
+
 import InputSample from './InputSample';
 
 export default function App() {
@@ -12,6 +14,7 @@ export default function App() {
       <Hello />
       <Counter />
       <InputSample />
+      <UserList />
       <p>Start editing to see some magic happen :)</p>
       <MultilineTextFields />
     </div>
