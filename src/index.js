@@ -1,10 +1,13 @@
-import * as React from 'react';
-import ReactDOM from 'react-dom/client';
-import { StyledEngineProvider } from '@mui/material/styles';
-import App from './MultilineTextFields';
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 
-ReactDOM.createRoot(document.querySelector('#root')).render(
-  <React.StrictMode>
+import App from './App';
+
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
     <App />
-  </React.StrictMode>
+  </StrictMode>
 );
