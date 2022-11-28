@@ -6,7 +6,8 @@ import Hello from './Hello';
 export default function App() {
   return (
     <div>
-      <Hello name="react" color="red" />
+      <Hello name="react" color="blue" />
+      <Hello />
       <p>Start editing to see some magic happen :)</p>
       <MultilineTextFields />
     </div>
