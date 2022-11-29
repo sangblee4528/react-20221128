@@ -1,13 +1,26 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './style.css';
 import MultilineTextFields from './MultilineTextFields';
 import Hello from './Hello';
 import Counter from './Counter';
 import UserList from './UserList';
+import CreateUser from './CreateUser';
 
 import InputSample from './InputSample';
 
 export default function App() {
+  const [inputs, setInputs] = useState({
+    username: '',
+    email: '',
+  });
+  const { username, email } = inputs;
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
+  };
   const userlist = [
     {
       id: 1,
@@ -37,6 +50,7 @@ export default function App() {
       <Hello />
       <Counter />
       <InputSample />
+      <CreateUser />
       <UserList users={userlist} />
       <p>Start editing to see some magic happen :)</p>
       <MultilineTextFields />
