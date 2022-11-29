@@ -6,7 +6,7 @@ function User({ user, onRemove, onToggle }) {
     return () => {
       console.log('사라짐');
     };
-  });
+  }, []);
   return (
     <div>
       <b
