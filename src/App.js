@@ -21,7 +21,7 @@ export default function App() {
       [name]: value,
     });
   };
-  const userlist = [
+  const [users, setUsers] = useState([
     {
       id: 1,
       username: 'velopert',
@@ -37,11 +37,26 @@ export default function App() {
       username: 'liz',
       email: 'liz@example.com',
     },
-  ];
+  ]);
 
   const nextId = useRef(4);
   const onCreate = () => {
+    const user = {
+      id: nextId.current,
+      username,
+      email,
+    };
+    //setUsers([...users, user]);
+    setUsers(users.concat(user));
+    setInputs({
+      username: '',
+      email: '',
+    });
     nextId.current += 1;
+  };
+
+  const onRemove = (id) => {
+    setUsers(users.filter((user) => user.id !== id));
   };
 
   return (
@@ -50,8 +65,13 @@ export default function App() {
       <Hello />
       <Counter />
       <InputSample />
-      <CreateUser />
-      <UserList users={userlist} />
+      <CreateUser
+        username={username}
+        email={email}
+        onChange={onChange}
+        onCreate={onCreate}
+      />
+      <UserList users={users} onRemove={onRemove} />
       <p>Start editing to see some magic happen :)</p>
       <MultilineTextFields />
     </div>
