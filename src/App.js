@@ -81,10 +81,13 @@ function App() {
 
   return (
     <div>
+      {/*}
       <Hello name="react" color="blue" />
       <Hello />
       <Counter />
       <InputSample />
+      */}
+
       <CreateUser
         username={username}
         email={email}
