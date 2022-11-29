@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useMemo } from 'react';
 import './style.css';
 import MultilineTextFields from './MultilineTextFields';
 import Hello from './Hello';
@@ -77,7 +77,7 @@ function App() {
     );
   };
 
-  const count = countActiveUsers(users);
+  const count = useMemo(() => countActiveUsers(users), [users]);
 
   return (
     <div>
