@@ -10,4 +10,5 @@ https://www.howdy-mj.me/javascript/observer-pattern
 adapter-pattern 어댑터 패턴
 https://dev-momo.tistory.com/entry/Adapter-Pattern-어댑터-패턴
 
-
+Factory Pattern
+https://aljjabaegi.tistory.com/617
