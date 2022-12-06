@@ -5,3 +5,9 @@ https://react.vlpt.us/basic/20-useReducer.html
 
 Observer 패턴 알아보기
 https://www.howdy-mj.me/javascript/observer-pattern
+
+
+adapter-pattern 어댑터 패턴
+https://dev-momo.tistory.com/entry/Adapter-Pattern-어댑터-패턴
+
+
