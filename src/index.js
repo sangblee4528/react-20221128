@@ -6,6 +6,7 @@ const target = document.getElementById('target');
 // observe 설정 (MutationObserverInit)
 const config = { attributes: true, childList: true };
 
+
 // observer 인스턴스
 const observer = new MutationObserver((mutations) => {
   console.log('mutations', mutations);
